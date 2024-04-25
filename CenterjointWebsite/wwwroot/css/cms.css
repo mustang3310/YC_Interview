@@ -1,0 +1,225 @@
+/*後臺導覽列*/
+.fg-0 {
+    flex-grow: 0;
+}
+
+@media(max-width:992px) {
+    .cms-title {
+        display: none;
+    }
+}
+
+.goTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.goTopBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.go-top-icon {
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-color: #339CD1;
+}
+
+.top-button-icon-color {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%) brightness(500%);
+}
+/*框線*/
+.cms-border {
+    border: 2px solid rgba(51, 156, 209, 0.5);
+    border-radius: 5px;
+}
+
+.right-border {
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.right-title-border {
+    border-right: 2px solid rgba(51, 156, 209, 0.5);
+}
+
+.li-bg:nth-child(odd) {
+    background-color: rgba(51, 156, 209, 0.1);
+    border-right: 2px solid rgba(192,192,192,0.1);
+    border-left: 2px solid rgba(192,192,192,0.1);
+}
+
+.li-bg:nth-child(even) {
+    background-color: white;
+    border-right: 2px solid rgba(192,192,192,0.1);
+    border-left: 2px solid rgba(192,192,192,0.1);
+}
+
+.li-bg:last-child {
+    border-bottom: 2px solid rgba(192,192,192,0.1);
+    border-radius: 0.375rem;
+}
+
+.article-cms-title {
+    background-color: #339cd1;
+}
+
+.ordinal-number-div {
+    height: 37.600px;
+}
+
+/*按鈕*/
+.btn-add {
+    background-color: #FFA500;
+    color: #ffffff;
+    border-radius: 0.375rem;
+    border: none;
+    width: 100px;
+    height: 37px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+
+    .btn-add:hover {
+        background: #339cd1;
+        color: white !important;
+        width: 100px;
+        border-color: white;
+    }
+
+.btn-modify {
+    background-color: #00CED1;
+    color: #ffffff;
+}
+
+    .btn-modify:hover {
+        background: #339cd1;
+        color: white !important;
+        border-color: white;
+    }
+
+/*後臺編輯頁面*/
+.img-width-30px {
+    width: 30px;
+}
+
+.img-height-30px {
+    height: 30px;
+}
+
+.input-group-text {
+    background-color: #339cd1 !important;
+    color: white !important;
+}
+
+.modify-background {
+    background-color: rgba(51, 156, 209, 0.1);
+}
+
+
+
+.sub-title {
+    color: #339cd1;
+}
+
+.modify-hr {
+    color: #FFA500;
+    margin: 0 35px 0 35px;
+    border: 2px solid #339cd1;
+    border-radius: 3px 4px;
+    opacity: 0.5;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    font-size: 12px;
+}
+
+.border-dotted {
+    border: dotted #339cd1;
+}
+
+.draggable-border {
+    border-bottom: dashed #339cd1;
+}
+
+/*ajax載入圖片*/
+.loading-icon {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/connection/loading.gif");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+    body.loading .loading-icon {
+        display: block;
+    }
+
+
+/*後臺產品編輯頁面*/
+.template-h {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.preview-h {
+    max-height: 600px;
+    overflow: auto;
+    border: 3px solid #0C68AB;
+}
+
+.mt-16px {
+    margin-top: 16px;
+}
+
+.iframe-border {
+    border: 3px solid #0C68AB;
+    border-radius: 5px 5px;
+}
+
+.iframe-border-mobile {
+    border: 3px solid #0C68AB;
+    border-radius: 20px 20px;
+}
+
+.dateImg {
+    cursor: pointer;
+}
+
+/*金融新知編輯頁面*/
+.article-title-search {
+    display: block;
+}
+
+.img-height-30px {
+    height: 30px;
+}
+
+.article-pic-pre-view {
+    border-radius: 0.375rem;
+    border: 2px solid rgba(51, 156, 209, 0.5);
+}

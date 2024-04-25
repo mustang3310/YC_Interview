@@ -1,0 +1,1113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>經緯智慧科技</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- favicon -->
+    <link rel="icon" href="err_img/logo_2.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+<style>
+.navbar {
+    height: 80px;
+}
+
+.nav-logo {
+    width: 213px;
+    height: 48px;
+}
+
+.bg-logo-color {
+    background-color: #00769F;
+}
+
+.nav-link{
+    color: #ffffff;
+    transition: color 0.25s 0.0833333333s;
+}
+
+.nav-link:hover {
+    color: #ff9900;
+}
+
+@media (min-width: 992px) {
+    .nav-item a {
+        font-size: 18px;
+    }
+}
+
+.footer-background{
+    background: linear-gradient(to top, #00769F, #00B8A9);
+    font-size: 12px;
+    color: #ffffff;
+}
+.btn-footer-website-map{
+    position: relative;
+    min-width: 80px;
+    min-height: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 4px #ffffff;
+    transition: color 0.25s 0.0833333333s;
+    padding: 10px 20px;
+}
+
+.btn-footer-website-map:before,
+.btn-footer-website-map:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border: 0 solid transparent;
+    box-sizing: border-box;
+}
+.btn-footer-website-map:before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+}
+.btn-footer-website-map:after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+}
+.btn-footer-website-map:hover {
+    color: #ff9900;
+}
+.btn-footer-website-map:hover:before,
+.btn-footer-website-map:hover:after {
+    border-color: #ff9900;
+    transition: border-color 0s, width 0.1s, height 0.1s;
+    width: 100%;
+    height: 100%;
+}
+.btn-footer-website-map:hover:before {
+    transition-delay: 0s, 0s, 0.1s;
+}
+.btn-footer-website-map:hover:after {
+    transition-delay: 0s, 0.1s, 0s;
+}
+.footer-line {
+    border: none;
+    background-color: #ff9900;
+    height: 3px;
+    opacity: 1;
+    padding-bottom: 3px;
+}
+
+.footer-a{
+    color: #ffffff;
+}
+.footer-a:hover{
+    color: #ff9900;
+}
+
+.img-footer-logo{
+    width: 200px;
+}
+
+::selection {
+    background-color: #f7e684;
+}
+h1{
+    font-size: 28px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h2{
+    font-size: 24px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h3{
+    font-size: 20px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h4{
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+h5{
+    font-size: 14px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+div{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+p{
+    font-size: 16px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+@media (max-width: 991px) {
+    .col-reverse-less-lg{
+        flex-direction: column-reverse;
+    }
+}
+
+.title-underline {
+    color: black;
+    box-shadow: 0 4px 0 -1px #ff9900;
+    padding-bottom: 5px;
+}
+
+.title-underline-orange {
+    color: white;
+    box-shadow: 0 4px 0 -1px #ff9900;
+    padding-bottom: 5px;
+}
+
+.header-background{
+    background-color: rgba(52, 117, 156,0.6);
+}
+
+.breadcrumbs {
+    margin-top: 96px;
+}
+
+.mr-10px{
+    margin-right: 10px;
+}
+
+.img-width-30px{
+    width: 30px;
+}
+
+.img-width-15px {
+    width: 15px;
+}
+
+.img-width-height-25px {
+    width: 25px;
+    height: 25px;
+}
+
+.img-width-1em{
+    width: 1em;
+}
+
+.image-container{
+    position: relative;
+}
+
+.carousel-inner {
+    overflow: hidden;
+}
+
+/* Button */
+.btn-normal-radius-middle{
+    background-color: #00796F;
+    color: #ffffff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+.btn-normal-radius-middle:hover{
+    background: #FFA500 ;
+    color: white ;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border-color: white ;
+}
+
+.btn-normal-min{
+    background-color: #00796F;
+    color: #ffffff;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+}
+
+.btn-normal-min:hover{
+    background: #FFA500 ;
+    color: white ;
+    width: 100px;
+    border-color: white ;
+}
+
+.btn-normal-max{
+    background-color: #00796F;
+    border-color:#00769F;
+    width: 160px;
+    height: 50px; 
+    border: none;   
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.5s;
+
+}
+
+.btn-normal-max:hover{
+    background: #FFA500 !important;
+    color: white !important;
+    width: 160px;
+    height: 50px;
+    border-color: white !important;
+}
+
+/* Chrome, Safari, Edge, Opera : input type:number 去掉上下箭頭*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 1400px){
+    .container{
+        max-width: 1200px !important;
+    }
+}
+
+/* Index */
+@media (max-width: 576px){
+    .bg-index{
+        margin-top: 0px;
+        background-image: url("../img/index.jpg");
+        min-height: 346px;
+        background-size: cover;
+        color: #ffffff;
+        background-position: right -100px bottom;
+    }
+    .index-title{
+        position: relative;
+        top: 265px;
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 576px){
+    .bg-index{
+        margin-top: 0px;
+        background-image: url("../img/index.jpg");
+        min-height: 346px;
+        background-size: cover;
+        background-position: right bottom;
+    }
+    .index-title{
+        position: absolute;
+        top: 265px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 768px){
+    .bg-index{
+        margin-top: 0px;
+        background-image: url("../img/index.jpg");
+        min-height: 460px;
+        background-size: cover;
+        background-position: right bottom;
+    }
+    .index-title{
+        position: absolute;
+        top: 330px;
+        color: #ffffff;
+        font-size: 28px;
+    }
+
+}
+
+@media (min-width: 992px){
+    .bg-index{
+        margin-top: 0px;
+        background-image: url("../img/index.jpg");
+        min-height: 595px;
+        background-size: cover;
+        background-position: right bottom;
+    }
+    .index-title{
+        position: absolute;
+        top: 445px;
+        color: #ffffff;
+        font-size: 28px;
+    }
+
+}
+@media (min-width: 1400px){
+    .index-main-view{
+        display: flex;
+        background-image: url("../img/index.png");
+        justify-content: center;
+        background-position: calc(50% - 40px) center;
+        background-size: 1465px ;
+    }
+    .bg-index{
+        min-width: 1400px; 
+    }
+}
+
+.title-white-underline {
+    box-shadow: 0 3px 0 #ffffff;
+    padding-bottom: 5px;
+}
+
+.subtitle-hr {
+    height: 2px;
+    width: 100%;
+    background-color: #00769F;
+    border: none;
+    opacity: 1;
+}
+
+.logo-color-text {
+    color: #00769F;
+    font-size: 24px;
+}
+.third-font-size {
+    font-size: 18px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.number-font-size {
+    font-size: 60px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.index-product-text{
+    color: black;
+    font-size: 24px;
+}
+
+.main-background{
+    background-image:  url("../img/main-background.svg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden
+}
+
+@media (min-width: 992px) {
+    .main-odd{
+        margin-right: 210px;
+    }
+    
+    .main-even{
+        margin-left: 210px;
+    }
+    
+    .theme-background{
+        background: linear-gradient(to right,#ffffff,#ffffff);
+        background-repeat: no-repeat;
+        background-size: 80% auto;
+       
+    }
+
+    .theme-background-even{
+        background: linear-gradient(to right,#ffffff,#ffffff);
+        background-repeat: no-repeat;
+        background-size: 80% auto;
+        background-position: right;
+        
+    }
+}
+
+.theme-background{
+    position: relative;
+    visibility: hidden;
+}
+
+.theme-background-even{
+    position: relative;
+    visibility: hidden;
+}
+
+.slideRightToLeft{
+    animation-name: animationSlideRightToLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+    visibility: visible;
+}
+
+.slideLeftToRight{
+    animation-name: animationLeftToRight;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+    visibility: visible;
+}
+
+@keyframes animationSlideRightToLeft {
+    from {
+        transform: translateX(70%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes animationLeftToRight {
+    from {
+        transform: translateX(-70%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+
+.product-solution-background {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("../img/product-solution/pexelsphoto318312726234-2std-1100w.png");
+    min-height: 400px;
+    background-size: cover;
+}
+
+.company-customer-background {
+    background-image: url("../img/block-company-size/engineer14451-saui-300w.png");
+    background-size: 98% 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.company-project-background {
+    background-image: url("../img/block-company-size/project14450-fs28-300w.png");
+    background-size: 98% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.company-engineer-background {
+    background-image: url("../img/block-company-size/image14443-pbwb-300w.png");
+    background-size: 98% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.index-product-a{
+    transition: all 0.3s ease-in-out;
+}
+
+.index-product-a:hover{
+    transform: scale(1.05,1.05);
+}
+
+@media(max-width: 992px) {
+    .company-customer-background {
+        background-position: center;
+    }
+
+    .company-project-background {
+        background-position: center;
+    }
+
+    .company-engineer-background {
+        background-position: center;
+    }
+}
+
+/* index - join & connection section */
+.index-box{
+    display: flex;
+}
+
+@media(max-width: 992px){
+    .index-box{
+        display: block;
+    }
+}
+
+.seeMore{
+    color: #00769F;
+}
+
+.seeMore:hover{
+    color: #00769F;
+}
+
+.index-a{
+    flex: 1;
+    transition: all .3s;
+    padding: 40px 20px;
+    color: #00769F;
+    border: 1px solid #DCDCDC;
+    background-color: #fbfbfb;
+}
+
+.index-a:hover{
+    color: #00769F;
+    flex: 1.2;
+}
+
+.right-arrow{
+    max-height: 0.8em;
+}
+
+.index-product-icon{
+    width: 100px;
+    height: 100px;
+}
+
+.index-success-case-backgroung{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.index-inbox-align-left{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 520px;
+    margin-left: auto;
+    padding: 44px 20px 44px 100px;
+}
+
+.index-inbox-align-right{
+    margin-right: auto;
+    padding: 44px 20px 44px 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 520px;
+    padding: 44px 100px 44px 100px;
+}
+
+.box-item::after{
+    content:" ";
+    display:block; 
+    width: 0%;
+    height: 4px;
+    background-color: #fc8100;
+    transition: .8s;
+}
+
+.index-a:hover .box-item::after{
+    width:120%; 
+}
+
+.seeMore:hover .box-item::after{
+    width:120%;
+}
+
+@media(max-width: 992px){
+    .index-a{
+        display: block;
+        padding: 40px 0;
+    }
+    .box-item h2{
+        margin-bottom: 0;
+    }
+
+    .index-inbox-align-left{
+        margin-left: 20%;
+        padding: 20px 20px;
+    }
+    
+    .index-inbox-align-right{
+        margin-left: 20%;
+        padding: 20px 20px;
+    }
+}
+
+.img-success-customer{
+    max-width: 160px;
+    height: fit-content;
+    filter: grayscale(100%);
+}
+
+.img-success-background-1{
+    background-image: url("../img/success-case/image34465-uv6-300h.png");
+}
+.img-success-background-2{
+    background-image: url("../img/success-case/image34464-cqze-300h.png");
+}
+.img-success-background-3{
+    background-image: url("../img/success-case/image34463-bc2k-300h.png");
+}
+.img-success-background-4{
+    background-image: url("../img/success-case/image34465-uv6-300h.png");
+}
+.img-success-background-5{
+    background-image: url("../img/success-case/image34464-cqze-300h.png");
+}
+.img-success-background-6{
+    background-image: url("../img/rectangle84599-7t4n-300h.png");
+}
+.img-success-setting{
+    height: 290px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 992px) {
+    .img-success-setting {
+        width: 100%;
+        padding-top: 100%;
+    }
+}
+
+
+/*product-solution + product-solution-page-2 + product-info page*/
+.product-solution-page-background{
+    background-image: url("../img/product-solution/product-solution.png");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-title{
+    background-color: #00769F;
+    color: #ffffff;
+}
+
+.accordion-item{
+    border-bottom: 2px solid #00769F;
+}
+
+.product-type-li{
+    border-bottom: 1px solid #979797;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.product-text-dark{
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-dark-rgb),var(--bs-text-opacity));
+}
+
+.product-text-dark:hover{
+    color:#FF9900;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #fcfcfc ;
+    color:black ;
+}
+
+.accordion-button:hover{
+    color: #FF9900 ;
+}
+
+.product-card{
+    border: 1px solid #979797;
+}
+
+.product-page-link{
+    color: #979797;
+}
+
+.product-page-link:hover{
+    color: white;
+}
+
+.page-link.active{
+    color:white ;
+    background-color:#00B8A9;
+    border-color:#e9ecef;
+}
+.page-link:hover{
+    color:white ;
+    background-color:#FFA500;
+    border-color:#e9ecef;
+}
+
+.product-info-background{
+    background-color: #fcfcfc;
+}
+
+/* Success case page */
+.nav-link.active {
+    background-color: #00769F !important;
+    color: #ffffff !important;
+}
+
+.img-success-customer-card{
+    width: 250px;
+    height: 150px; 
+}
+
+.img-success-customer-card img {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.success-case-background{
+    background-image: url("../img/success-case/success-case.jpg");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.success-case-div-border{
+    border-left: 1px solid #d3d3d3 ;
+    border-right: 1px solid #d3d3d3 ;
+    border-bottom: 1px solid #d3d3d3 ;
+}
+
+.success-case-tab[aria-selected="true"] {
+    display: inline-block;
+    border-bottom: 2px solid #FFA500; 
+    padding-bottom: 5px;
+}
+
+.success-case-card{
+    width: 400px;
+    height: 380px;
+}
+
+.success-case-card-title{
+    color: black;
+    box-shadow: 0 4px 0 -1px #00769F;
+    padding-bottom: 5px;
+
+}
+    
+  /* About us page */
+.about-us-background{
+    background-image: url("../img/about-us/company-vision.jpg");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 991px) {
+    .about-us-background-history-img {
+        content: url('../img/about-us/utsi-history-straight.png');
+    }
+}
+
+.about-us-join-background{
+    background-color: #CDF2FF;
+}
+
+
+/* connection info*/
+.connection-background{
+    background-image: url("../img/connection-us/connection-us.jpg");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.connection-icon {
+    font-size: 40px;
+    color: #00769F;
+    transition: color 0.25s 0.0833333333s;
+}
+
+.contact-a{
+    color: black;
+    transition: color 0.25s 0.0833333333s;
+}
+
+.contact-a:hover{
+    color:#FFA500;
+}
+
+.contact-a:hover .connection-icon{
+    color:#FFA500;
+}
+
+.map{
+    border:0;
+    width: 100%;
+    height: 500px;
+}
+
+a .orange-icon{
+    position:absolute;
+    top: 9px;
+    left: -2px;
+}
+
+a .logo-icon{
+    position:absolute;
+    top: 9px;
+    left: -2px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+a:hover .logo-icon{
+    opacity: 0;
+}
+
+
+/* Join us page */
+.join-us-background{
+    background-image: url("../img/join-us/join-us.jpg");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.join-us-lineheight{
+    line-height:50px;
+}
+
+.w-h-125px{
+    width: 125px;
+    height: 125px;
+}
+
+.join-us-subbackground{
+    background: linear-gradient(to left, #00769F, #00B8A9);
+}
+
+.join-us-text{
+    font-size: 72px;
+    color: white;
+}
+
+a .join-us-text{
+    transition: all 0.5s ease-in-out;
+}
+
+a:hover .join-us-text{
+    transform: scale(1.05,1.05);
+    color: #ff9900;
+}
+
+.join-us-p-text{
+    line-height:50px;
+    font-size: 20px;
+}
+
+.text-transform:hover{
+    font-size: 28px;
+    transition: all 0.5s ease-in-out;
+}
+
+a .orange-circle-arrow-right-solid{
+    position:absolute;
+    top: -25px;
+    left: -19px;
+}
+
+a .white-circle-arrow-right-solid{
+    position:absolute;
+    top: -27px;
+    left: -20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+a:hover .white-circle-arrow-right-solid{
+    opacity: 0;
+}
+
+/* ESG page */
+.esg-background{
+    background-image: url("../img/esg/ESG.jpg");
+    min-height: 500px;
+}
+
+.animate__animated.animate__fadeInLeft {
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__fadeInRight {
+    --animate-duration: 2s;
+}
+
+.social-text{
+    text-align: right;
+}
+
+@media (max-width: 992px) {
+    .esg-text{
+        text-align: center
+    }
+}
+
+.esg-carousel-orange .carousel-indicators [data-bs-target] {
+    background-color: #ff9900 ;
+}
+
+.esg-carousel-inner-color{
+    background-color:  #fdf6f3 ;
+}
+
+.esg-carousel-inner-color-blue{
+    background-color: #e8f2f9 ;
+}
+
+.esg-carousel-blue .carousel-indicators [data-bs-target] {
+    background-color: #00769F;
+}
+
+.esg-title-underline-blue {
+    color: black;
+    box-shadow: 0 4px 0 -1px #00769F;
+    padding-bottom: 5px;
+}
+
+.esg-carousel-green .carousel-indicators [data-bs-target] {
+    background-color: #00796F ;
+}
+
+.esg-title-underline-green {
+    color: black;
+    box-shadow: 0 4px 0 -1px #00796F;
+    padding-bottom: 5px;
+}
+
+.esg-carousel-inner-color-green{
+    background-color: #e6f8f6 ;
+
+}
+
+/* website-map */
+
+.website-background{
+    background-image: url("../img/website-map/website.jpg");
+    background-size: cover;
+    min-height: 500px;
+}
+
+.website-main a{
+    color: black;
+}
+
+.website-main a:hover{
+    color: #ff9900;
+}
+
+/* error page */
+
+.error-page{
+    min-height: 600px;
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-logo-color fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="Home/Index"><img class="nav-logo" src="err_img/logo-6-白色無底.png"
+                        alt="經緯智慧logo" /></a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <!-- 麵包屑 -->
+                <nav aria-label="breadcrumb" class="breadcrumbs">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="Home/Index">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">500</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <section>
+            <div class="d-flex flex-column align-items-center justify-content-center error-page">
+                <div><img class="img-fluid" src="err_img/error500.png" alt=""></div>
+                <div>
+                    <h1>這個頁面出了一點問題...</h1>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-background">
+        <div class="container">
+            <div class="row mb-5">
+                <div
+                    class="col-lg-4 py-3 align-items-center justify-content-center text-center d-flex position-relative flex-column mt-5">
+                    <img src="err_img/logo-03.png" class="img-footer-logo mb-3 d-block position-relative text-center"
+                        alt="">
+                    <a href="website-map.html" class="btn-footer-website-map">網站地圖</a>
+                </div>
+                <div class="col-lg-4 py-3 pl-5 mt-5">
+                    <h1 class="mt-3 text-white">聯絡資訊</h1>
+                    <hr class="footer-line">
+                    <p class="position-relative d-flex m-2">電話: (02)2657-5627</p>
+                    <p class="position-relative d-flex m-2">傳真: (02)2657-6627</p>
+                    <p class="position-relative d-flex m-2">信箱: sales-dept@utsi.com.tw</p>
+                    <p class="position-relative d-flex m-2">地址: 114063 台北市內湖區瑞光路335號9樓之1</p>
+                </div>
+                <div class="col-lg-4 py-3 pl-5 mt-5">
+                    <h1 class="mt-3 text-white">內容</h1>
+                    <hr class="footer-line">
+                    <p class="position-relative d-flex m-2">
+                        <a class="text-decoration-none position-relative d-flex footer-a" href="about-us.html">關於我們</a>
+                    </p>
+                    <p class="position-relative d-flex m-2">
+                        <a class="text-decoration-none position-relative d-flex footer-a"
+                            href="product-solution.html">產品與解決方案</a>
+                    </p>
+                    <p class="position-relative d-flex m-2">
+                        <a class="text-decoration-none position-relative d-flex footer-a"
+                            href="success-case.html">成功案例</a>
+                    </p>
+                    <p class="position-relative d-flex m-2">
+                        <a class="text-decoration-none position-relative d-flex footer-a"
+                            href="connection-info.html">聯絡我們</a>
+                    </p>
+                    <p class="position-relative d-flex m-2">
+                        <a class="text-decoration-none position-relative d-flex footer-a" href="join-us.html">徵才資訊</a>
+                    </p>
+                    <p class="position-relative d-flex m-2">
+                        <a class="text-decoration-none position-relative d-flex footer-a" href="ESG.html">企業永續</a>
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-white d-flex justify-content-center align-items-center pb-5 opacity-50">
+                Copyright © 2023 UNIVERSAL
+                INTELLIGENT TECHNOLOGY INC.
+                All rights
+                reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

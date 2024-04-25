@@ -1,0 +1,109 @@
+﻿<section>
+    <div class="container">
+        <!-- 麵包屑 -->
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">首頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- 視覺圖 -->
+    <div class="connection-background">
+        <div class="container">
+            <div class="d-flex justify-content-start pt-4 pb-3 text-white">
+                <h1>聯絡我們</h1>
+            </div>
+            <div class="d-flex justify-content-star text-white fs-5">
+                如有任何疑問，
+                <br />
+                歡迎您以下列連絡方式聯繫
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-3 mt-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-5">
+                <div class="d-flex justify-content-center">
+                    <span class="title-slash-orange">/</span>
+                    <h1 class="text-black mt-4">聯絡資訊</h1>
+                </div>
+
+                <div class="mt-2">
+                    <div class="row mt-4 ms-3">
+                        <a class="row contact-a p-3" href="tel:0226575627">
+                            <div class="col-1">
+                                <div class="image-container">
+                                    <img src="../img/svg-img/logo_color_phone-solid.svg" class="img-width-30px logo-icon" alt="">
+                                </div>
+                            </div>
+                            <div class="col-10 ms-3">
+                                電話:
+                                <br>
+                                (02)2657-5627
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row mt-3 ms-3">
+                        <div class="row p-3">
+                            <div class="col-1">
+                                <img src="../img/svg-img/logo_color_fax-solid.svg" class="img-width-30px" alt="">
+                            </div>
+                            <div class="col-10 ms-3">
+                                傳真:
+                                <br>
+                                (02)2657-6627
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row mt-3 ms-3">
+                        <a class="row contact-a p-3" href="mailto:hello@centerjoint.com.tw">
+                            <div class="col-1">
+                                <div class="image-container">
+                                    <img src="../img/svg-img/logo_color_envelope-solid.svg" class="img-width-30px logo-icon" alt="">
+                                </div>
+                            </div>
+                            <div class="col-10 ms-3">
+                                信箱:
+                                <br>
+                                hello@centerjoint.com.tw
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row mt-3 ms-3">
+                        <a class="row contact-a p-3" href="https://maps.app.goo.gl/FK2kboufMLPrXWwt8" target="_blank">
+                            <div class="col-1">
+                                <div class="image-container">
+                                    <img src="../img/svg-img/logo_color_location-dot-solid.svg" class="img-width-30px logo-icon" alt="">
+                                </div>
+                            </div>
+                            <div class="col-10 ms-3">
+                                地址:
+                                <br>
+                                114063 台北市內湖區瑞光路335號9樓之1
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="d-flex justify-content-center">
+                    <span class="title-slash-orange">/</span>
+                    <h1 class="text-black mt-4">位置資訊</h1>
+                </div>
+
+                <div class="mt-4 loader">
+                    <iframe class="map-iframe map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.7322746521495!2d121.57167227515943!3d25.07706177778849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad8746f1fe73%3A0xba8ae85acb234b86!2z5a6X5a646ZGr56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1700466181140!5m2!1szh-TW!2stw"
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

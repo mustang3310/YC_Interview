@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "宗宸鑫科技股份有限公司";
+}
+
+<!-- 主視覺圖 -->
+<section class="pt-4 mt-5">
+    <div class="bg-index">
+        <img class="img-fluid" src="../img/index/index.svg" alt="">
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="d-flex justify-content-center mt-5">
+        <span class="title-slash-orange">/</span>
+        <h1 class="text-black mt-4 text-block">服務範圍</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-4">
+            <div class="text-center m-2">
+                <h2 class="h3-title-color">銀行、保險核心</h2>
+            </div>
+            <div class=" d-flex justify-content-center p-3">
+                <img class="img-fluid w-h-200px" src="../img/index/core-system-gradient.svg" alt="">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="text-center m-2">
+                <h2 class="h3-title-color">資訊系統整合</h2>
+            </div>
+            <div class=" d-flex justify-content-center p-3">
+                <img class="img-fluid w-h-200px" src="../img/index/Information-system-integration-gradient.svg" alt="">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="text-center m-2">
+                <h2 class="h3-title-color">軟硬體設備建置與規劃</h2>
+            </div>
+            <div class=" d-flex justify-content-center p-3">
+                <img class="img-fluid w-h-200px" src="../img/index/Construction-planning-gradient.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 聯絡我們 & 加入我們 -->
+<section class="pt-3 mt-5">
+    <div class="index-box">
+        <a asp-area="" asp-controller="Home" asp-action="JoinUs" class="index-a">
+            <div class="d-flex align-items-center index-inbox-align-left">
+                <div class="text-center box-item">
+                    <h2 class="d-flex align-items-center text-nowrap">
+                        加入我們 JOIN US <span class="arrow-white-space">&nbsp</span> <img class="d-inline-block right-arrow" src="img/svg-img/right-arrow.svg" alt="">
+                    </h2>
+                </div>
+            </div>
+        </a>
+        <a asp-area="" asp-controller="Home" asp-action="ConnectionInfo" class="index-a">
+            <div class="d-flex align-items-center index-inbox-align-right">
+                <div class="text-center box-item">
+                    <h2 class="d-flex align-items-center text-nowrap">
+                        聯絡我們 CONTACT <span class="arrow-white-space">&nbsp</span> <img class="d-inline-block right-arrow" src="img/svg-img/right-arrow.svg" alt="">
+                    </h2>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/index/index.js" asp-append-version="true" asp-add-nonce></script>
+    @if (ViewBag.Preview is not null && ViewBag.Preview == true)
+    {
+        <script src="~/js/preview-page.js" asp-add-nonce></script>
+    }
+}

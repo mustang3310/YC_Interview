@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CenterJoint</title>
+    <link rel="shortcut icon" href="~/img/1700203562.ico" type="image/x-icon">
+    <link rel="stylesheet" href="~/lib/bootstrap-5.2.3-dist/css/bootstrap.min.css" asp-append-version="true" async />
+    <link rel="stylesheet" href="~/lib/fontawesome-free-6.4.2-web/css/all.min.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/owlcarousel/css/owl.carousel.min.css" />
+    <script src="~/js/site-head.js" asp-add-nonce></script>
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light nav-bg-color fixed-top">
+            <div class="container">
+                <button class="navbar-toggler nav-text d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto ms-auto mt-2 mt-lg-0">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <form id="__AjaxAntiForgeryForm">
+        @Html.AntiForgeryToken()
+    </form>
+
+    <main role="main" class="pb-3">
+        <div class="loading-icon"></div>
+        @RenderBody()
+    </main>
+
+    <footer class="footer-background">
+        <div class="container">
+            <div class="row mb-4 justify-content-center">
+                <div class="col-lg-4 py-3 mt-5">
+                    <div class="d-flex align-content-center">
+                        <span class="title-slash-orange">/</span>
+                        <h1 class="text-white mt-4">Q u i c k　L i n k s</h1>
+                    </div>
+                    <div class="mt-3 row">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-add-nonce></script>
+    <script src="~/lib/bootstrap-5.2.3-dist/js/bootstrap.min.js" asp-add-nonce></script>
+    <script src="~/lib/owlcarousel/dist/owl.carousel.min.js" asp-add-nonce></script>
+    <script src="~/js/site.js" asp-append-version="true" asp-add-nonce></script>
+    <script src="~/lib/dompurify/dist/purify.min.js" asp-append-version="true" asp-add-nonce></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

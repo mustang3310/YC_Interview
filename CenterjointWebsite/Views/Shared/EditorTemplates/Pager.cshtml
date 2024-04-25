@@ -1,0 +1,44 @@
+﻿@using YCInterview.Web.Widget;
+@model Pager
+
+<nav id="pager" aria-label="Page navigation example" data-current-page="@Model.PageNumber" data-total-page="@Model.PageCount">
+    <ul class="pagination justify-content-center pt-3">
+
+        <li class="page-item px-1">
+            <a id="startPage" class="page-link" aria-label="Start">
+                <img src="../img/svg-img/button_angles-left-solid-07.svg"
+                     class="img-width-20px" alt="">
+            </a>
+        </li>
+
+        <li class="page-item px-1">
+            <a id="previousPage" class="page-link" aria-label="Previous">
+                <img src="../img/svg-img/button_chevron-left-solid.svg"
+                     class="img-width-10px" alt="">
+            </a>
+        </li>
+
+        @for (int i = 1; i <= @Model.PageCount; i++)
+        {
+            <li class="page-item px-1">
+                <a name="pager-button" class="page-link product-page-link page-number text-decoration-none @(i == Model.PageNumber ? "active" : "")">@i</a>
+            </li>
+        }
+
+        <li class="page-item px-1">
+            <a id="nextPage" class="page-link" aria-label="Next">
+                <img src="../img/svg-img/button_chevron-right-solid.svg"
+                     class="img-width-10px" alt="">
+            </a>
+        </li>
+
+        <li class="page-item px-1">
+            <a id="endPage" class="page-link" aria-label="End">
+                <img src="../img/svg-img/button_angles-right-solid-05.svg"
+                     class="img-width-20px" alt="">
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script src="~/js/shared/pager.js" asp-add-nonce></script>

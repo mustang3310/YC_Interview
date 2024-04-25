@@ -1,0 +1,78 @@
+﻿@using YCInterview.Web.Widget;
+@using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
+@using OfficialWebsite.Core.Attributes;
+@model ImageUploader
+
+@{
+    var attributes = ((DefaultModelMetadata)ViewData.ModelMetadata).Attributes.PropertyAttributes;
+
+    string format = string.Empty;
+    @if (attributes.Any(x => x.GetType().Equals(typeof(ImageFormatAttribute))))
+    {
+        format = "僅允許下列圖片格式: " + string.Join(", ", ImagesExtension.AcceptImgExtentions);
+    }
+
+    string ratio = string.Empty;
+    @if (attributes.Any(x => x.GetType().Equals(typeof(AspectRatioAttribute))))
+    {
+        var tempAttr = (AspectRatioAttribute)attributes.Single(x => x.GetType().Equals(typeof(AspectRatioAttribute)));
+        ratio = "僅允許下列比例(長:寬): " + tempAttr.Width + ":" + tempAttr.Height;
+    }
+
+    string maxSize = string.Empty;
+    @if (attributes.Any(x => x.GetType().Equals(typeof(MaxImageLengthAttribute))))
+    {
+        var tempAttr = (MaxImageLengthAttribute)(attributes.Single(x => x.GetType().Equals(typeof(MaxImageLengthAttribute))));
+        maxSize = "檔案大小不得超過: " + (tempAttr.MaxLength / 1024 / 1024) + "MB";
+    }
+
+    string maxHeight = string.Empty;
+    @if (attributes.Any(x => x.GetType().Equals(typeof(HeightRangeAttribute))))
+    {
+        var tempAttr = (HeightRangeAttribute)(attributes.Single(x => x.GetType().Equals(typeof(HeightRangeAttribute))));
+        maxHeight = "圖片寬度限制在: " + (tempAttr.MinHeight) + "px ~ " + (tempAttr.MaxHeight) + "px";
+    }
+
+    string maxWidth = string.Empty;
+    @if (attributes.Any(x => x.GetType().Equals(typeof(WidthRangeAttribute))))
+    {
+        var tempAttr = (WidthRangeAttribute)(attributes.Single(x => x.GetType().Equals(typeof(WidthRangeAttribute))));
+        maxWidth = "圖片長度限制在: " + (tempAttr.MinWidth) + "px ~ " + (tempAttr.MaxWidth) + "px";
+    }
+
+}
+
+<div class="upload-container">
+    <div class="row">
+        <div class="col-6 d-flex justify-content-center article-pic-pre-view h-auto px-0">
+            <input type="hidden" asp-for="@Model.Path" name="ImagePath" />
+            <div class="article-create-img-default d-none"></div>
+            <img src="@Model.Path" id="img_@ViewData.TemplateInfo.HtmlFieldPrefix" class="image-uploader-display" onerror="this.src='@Url.Content("/img/cancel-pic.png")'" alt=""/>
+
+        </div>
+        <div class="col-6 px-auto d-flex align-items-center justify-content-center">
+            <div>
+                <div class="text-center">
+                    <label class="image-uploader-button" asp-for="@Model"> 上傳圖片 </label>
+                    <input asp-for="@Model" class="partialImg mb-2 image-uploader-input" , type="file" ,accept="image/*" ,value=@Model.FileName />
+                </div>
+                <div>
+                    <p>
+                        <ul>
+                            <li class="align-left">@format</li>
+                            <li class="align-left">@ratio</li>
+                            <li class="align-left">@maxSize</li>
+                            <li class="align-left">@maxHeight</li>
+                            <li class="align-left">@maxWidth</li>
+
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/js/shared/image-uploader.js" asp-add-nonce></script>
+

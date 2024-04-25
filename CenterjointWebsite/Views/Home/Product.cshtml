@@ -1,0 +1,95 @@
+﻿<section>
+    <div class="container">
+        <!-- 麵包屑 -->
+        <nav aria-label="breadcrumb" class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">首頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- 視覺圖 -->
+    <div class="product-background">
+        <div class="container">
+            <div class="d-flex justify-content-start pt-4 pb-3 text-white">
+                <h1>產品與解決方案</h1>
+            </div>
+            <div class="d-flex justify-content-star text-white fs-5">
+                透過先進技術和創新思維，
+                <br />
+                我們提供多功能、高效、可客製化的解決方案。
+                <br />
+                幫助您應對挑戰、實現目標，
+                <br />
+                在競爭激烈的市場中脫穎而出。
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-3 mt-4">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <span class="title-slash-orange">/</span>
+            <h1 class="text-black mt-4">解決產業痛點，創造無限價值</h1>
+        </div>
+    </div>
+
+        @await Html.PartialAsync("~/Views/Shared/Template/_TemplateE.cshtml",1)
+        @await Html.PartialAsync("~/Views/Shared/Template/_TemplateF.cshtml")
+
+</section>
+
+<section class="py-3 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <span class="title-slash-orange">/</span>
+            <h1 class="text-black mt-4">整體系統架構</h1>
+        </div>
+        <div class="pt-3">
+            <img src="../img/product/Application-Architecture-cn.png" class="img-fluid" alt="" />
+        </div>
+    </div>
+</section>
+
+<section class="py-3 mt-5">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <span class="title-slash-orange">/</span>
+            <h1 class="text-black mt-4">誰也在使用此系統</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                <div class=" d-flex justify-content-center p-3" style="width:300px">
+                    <img class="" src="../img/product/logo-tl.png" style="min-width:100%; height:auto" alt="">
+                </div>
+            </div>
+            <div class="col-lg-8 d-flex flex-column pt-4">
+                <div class="d-flex justify-content-center">
+                    <h2 class="index-subtitle mb-2">台灣人壽</h2>
+                </div>
+                <div class=" d-flex justify-content-center pt-1">
+                    <h4 class="lh-lg">
+                        台灣人壽為臺灣第一家壽險公司，於1947年成立，並於1998年邁向民營化。落實在地深耕的台灣人壽，以提供保戶全方位保險服務為出發，持續關注市場之變化。
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-3 my-5">
+    <div class="container">
+        <div class="row">
+            <div class=" img-product-information img-down-page-setting d-flex justify-content-center align-items-center">
+                <button class="btn-normal-max shadow"><h3 class="mb-0">點擊來信查詢</h3></button>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script src="~/js/product/temlplateArea.js" asp-append-version="true" asp-add-nonce></script>
+}

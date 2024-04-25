@@ -1,0 +1,12 @@
+﻿@using YCInterview.Web.Widget;
+@model TrixRichTextEditor
+
+<div>
+    <input id="@ViewData.TemplateInfo.HtmlFieldPrefix" value="@Model.Value" type="hidden" name="@ViewData.TemplateInfo.HtmlFieldPrefix">
+    <trix-editor class="bg-white" input="@ViewData.TemplateInfo.HtmlFieldPrefix"></trix-editor>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+<script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js" asp-for-nonce></script>
+<script src="~/js/shared/trix-rich-text-editor.js" asp-for-nonce></script>

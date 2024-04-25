@@ -1,0 +1,34 @@
+﻿@using YCInterview.Web.Widget;
+@using System.ComponentModel.DataAnnotations;
+@using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
+@using Domain
+@model DateTime?
+
+<link rel="stylesheet" href="~/lib/flatpickr/css/flatpickr.css">
+<script src="~/lib/flatpickr/js/flatpickr.js"></script>
+<script src="~/lib/flatpickr/js/zh-tw.js"></script>
+
+@{
+    string id = @ViewData.TemplateInfo.HtmlFieldPrefix;
+    var attributes = ((DefaultModelMetadata)ViewData.ModelMetadata).Attributes.PropertyAttributes;
+    var placeholder = string.Empty;
+    if (attributes.Any(x => x.GetType().Equals(typeof(DisplayAttribute))))
+    {
+        placeholder = ((DisplayAttribute)(attributes.Single(x => x.GetType().Equals(typeof(DisplayAttribute))))).GetName();
+    }
+}
+@{
+    string time = string.Empty;
+    if (Model.HasValue)
+    {
+        time = Model.Value.ToLocalTimeFormat(Context);
+    }
+}
+
+<input id="datetimepickerInfo" class="datetimepickerInfo" type="hidden" data-datetimepicker-id="@id" data-time="@time" />
+<input id="@id" class="form-control position-static datetimepicker" placeholder="@placeholder" />
+<input name="@id" type="hidden" />
+
+
+<script src="~/js/shared/date-time.js" asp-add-nonce></script>
+    

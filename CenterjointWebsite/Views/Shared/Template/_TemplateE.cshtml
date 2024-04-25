@@ -1,0 +1,60 @@
+﻿@{
+    IList<string> texts = Model.Texts;
+    IList<string> images = Model.Images;
+}
+<div class="row bg-product-items-l mt-5 p-4 w-100 templateTop">
+    <div class="col-lg-3 p-5">
+        <div class="pt-4 d-flex flex-column align-items-center">
+            <h2 class="mb-4 text-block">@texts[0]</h2>
+            <div class="image-container position-relative mb-4">
+                <img class="w-h-140px image-block" src="@images[0]" alt="">
+            </div>
+            <h4 class="text-block pre-wrap">@texts[1]</h4>
+        </div>
+    </div>
+    <div class="col-lg-1 d-flex flex-column align-items-center justify-content-center">
+        <div class="next-article-link d-flex flex-column align-items-center justify-content-center clicktemplateE cursor-pointer">
+            <div class="next-article-icon"></div>
+            <div class="pt-2">
+                <h5 class="product-expand-text text-center">點選我查看詳細功能介紹</h5>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-8 showtemplateE d-none">
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-3 pt-2 d-flex flex-column align-items-center mx-2 px-0">
+                <div class="image-container position-relative mb-4">
+                    <img class="w-h-140px image-block" src="@images[1]" alt="">
+                </div>
+                <h2 class="mb-4 text-block">@texts[2]</h2>
+                <h4 class="text-block pre-wrap">@texts[3]</h4>
+            </div>
+            <div class="col-lg-3 pt-2 d-flex flex-column align-items-center mx-2 px-0">
+                <div class="image-container position-relative mb-4">
+                    <img class="w-h-140px image-block" src="@images[2]" alt="">
+                </div>
+                <h2 class="mb-4 text-block">@texts[4]</h2>
+                <h4 class="text-block pre-wrap">@texts[5]</h4>
+            </div>
+            <div class="col-lg-3 pt-2 d-flex flex-column align-items-center mx-2 px-0">
+                <div class="image-container position-relative mb-4">
+                    <img class="w-h-140px image-block" src="@images[3]" alt="">
+                </div>
+                <h2 class="mb-4 text-block">@texts[6]</h2>
+                <h4 class="text-block pre-wrap">@texts[7]</h4>
+            </div>
+            <div class="col-lg-1 pt-2 d-flex flex-column align-items-center justify-content-center mx-2 px-0">
+                <div class="d-flex flex-column align-items-center justify-content-center hide-showtemplateE-div prev-article-link cursor-pointer">
+                    <div class="prev-article-icon"></div>
+                    <div class="pt-2">
+                        <h5 class="product-expand-text text-center">收起</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/shared/template/templateArea.js" asp-append-version="true" asp-add-nonce></script>
+<script src="~/js/shared/template/template-e.js" asp-append-version="true" asp-add-nonce></script>

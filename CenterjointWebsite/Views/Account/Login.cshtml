@@ -1,0 +1,63 @@
+@model LoginViewModel
+@{
+    ViewBag.Title = "登入";
+    RecaptchaModel recaptcha = (RecaptchaModel)ViewBag.Recaptcha;
+    string key = recaptcha.Key;
+    string recaptchaUrl = $"https://www.google.com/recaptcha/api.js?render={key}";
+}
+
+<div class="vh-100 d-flex flex-column align-items-center justify-content-center">
+    <div>
+        <form class="" method="post" asp-controller="Account" asp-action="Login" id="frmLogin"
+              asp-route-returnurl="">
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.Token)
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="card login-card p-4">
+                    <h1 class="text-center">登入</h1>
+                    <div class="row my-3">
+                        <div class="col-3 d-flex align-items-center">
+                            <label asp-for="Name"></label>
+                        </div>
+                        <div class="col-9">
+                            <input class="form-control" asp-for="Name" />
+                            @Html.ValidationMessageFor(m => m.Name, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="row my-3">
+                        <div class="col-3 d-flex align-items-center">
+                            <label asp-for="Password"></label>
+                        </div>
+                        <div class="col-9">
+                            <input class="form-control" asp-for="Password" />
+                            @Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(m => m.ErrorMessage, null, new { @class = "text-danger" })
+                    <div class="d-flex justify-content-end">
+                        @{
+                            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT").Equals("Development"))
+                            {
+                                <input class='btn btn-primary' type='submit' value='登入' />
+                            }
+                            else
+                            {
+                                <input class="btn btn-primary g-recaptcha" type="submit" value="登入"
+                                       data-sitekey="@key"
+                                       data-callback='onSubmit'
+                                       data-action='submit' />
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/js/login.js" asp-add-nonce></script>
+    <script type="text/javascript" src="@recaptchaUrl" asp-add-nonce async defer></script>
+}

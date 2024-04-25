@@ -1,0 +1,60 @@
+﻿@using YCInterview.Web.ViewModels
+@using System.Text
+@model ViewPageableModel
+@{
+    var totalPage = ((Model.TotalCount + Model.PageSize - 1) / Model.PageSize);
+    var route = @ViewData["url"];
+    var groupData = Model.GroupedData;
+    StringBuilder paramBuilder = new();
+    string param = "";
+}
+@if (groupData != null && groupData.Count > 0)
+{
+    @foreach (var item in groupData)
+    {
+        paramBuilder.Append($"{item.Key}={item.Value}&");
+    }
+
+    param = paramBuilder.ToString().Remove(paramBuilder.ToString().Length - 1);
+}
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center pt-3" id="pagination" data-current-page="@Model.PageNumber" data-total-page="@totalPage">
+
+        <li class="page-item px-1">
+            <a class="page-link" href="@route?page=1&@param" aria-label="Start">
+                <img src="../img/svg-img/button_angles-left-solid-07.svg"
+                     class="img-width-20px" alt="">
+            </a>
+        </li>
+
+        <li class="page-item px-1">
+            <a class="page-link" href="@route?page=@(Model.PageNumber == 1 ? "1" : Model.PageNumber-1)&@param" aria-label="Previous">
+                <img src="../img/svg-img/button_chevron-left-solid.svg"
+                     class="img-width-10px" alt="">
+            </a>
+        </li>
+        @for (var i = 1; i <= @totalPage; i++)
+        {
+            <li class="page-item px-1">
+                <a class="page-link product-page-link page-number text-decoration-none @(i == Model.PageNumber ? "active" : "")" data-page="@i"
+                   href="@route?page=@i&@param">@i</a>
+            </li>
+        }
+
+
+        <li class="page-item px-1">
+            <a class="page-link" href="@route?page=@(Model.PageNumber == @totalPage ? @totalPage : Model.PageNumber +1)&@param" aria-label="Next">
+                <img src="../img/svg-img/button_chevron-right-solid.svg"
+                     class="img-width-10px" alt="">
+            </a>
+        </li>
+
+        <li class="page-item px-1">
+            <a class="page-link" href="@route?page=@totalPage&@param" aria-label="End">
+                <img src="../img/svg-img/button_angles-right-solid-05.svg"
+                     class="img-width-20px" alt="">
+            </a>
+        </li>
+    </ul>
+</nav>

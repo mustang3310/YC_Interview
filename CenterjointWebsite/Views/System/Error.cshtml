@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "錯誤";
+}
+<div class="container">
+    <!-- 麵包屑 -->
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">錯誤</li>
+        </ol>
+    </nav>
+</div>
+
+<section class="mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center error-page">
+        <img class="img-fluid w-25 h-25" src="~/img/error/error.png">
+        <h1 class="mb-4">啊呀！這個頁面出了一點問題</h1>
+        <a class="seeMore" href="@Url.Action("Index","Home")">
+            <div class="box-item">
+                <h1><span>回到首頁</span></h1>
+            </div>
+        </a>
+    </div>
+</section>

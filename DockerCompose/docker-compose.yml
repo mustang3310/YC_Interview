@@ -1,0 +1,57 @@
+version: '3.8'
+
+volumes:
+  utsi-volume:
+  centerjoint-volume:
+  nginx-volume:
+  letsencrypt-volume:
+  certbot-volume:
+  acme-challenge-volume:
+
+services:
+  utsi-website:
+    image: ${UTSI_WEBSITE_REGISTRY}:${UTSI_WEBSITE_VERSION}
+    container_name: utsi-website
+    ports:
+      - "8080:80"
+    volumes:
+      - utsi-volume:/app/AppData:rw
+
+  centerjoint-website:
+    image: ${UTSI_WEBSITE_REGISTRY}:${UTSI_WEBSITE_VERSION}
+    container_name: centerjoint-website
+    ports:
+      - "8081:80"
+    volumes:
+      - centerjoint-volume:/app/AppData:rw
+
+  nginx:
+    image: nginx:${NGINX_VERSION}
+    container_name: nginx
+    volumes:
+      - nginx-volume:/etc/nginx:rw
+      - letsencrypt-volume:/etc/letsencrypt:rw
+      - acme-challenge-volume:/etc/acme-challenge:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - utsi-website
+    links:
+      - utsi-website
+
+  certbot:
+    image: asia-east1-docker.pkg.dev/utsi-offical-website/utsi/crontab:${CERTBOT_VERSION}
+    container_name: certbot
+    volumes:
+      - letsencrypt-volume:/etc/letsencrypt:rw
+      - certbot-volume:/root/conf:rw
+      - acme-challenge-volume:/root/acme-challenge:rw
+
+  # crontab:
+  #   image: willfarrell/crontab:${CRONTAB_VERSION}
+  #   container_name: crontab
+  #   volumes:
+  #   - /var/run/docker.sock:/var/run/docker.sock:ro
+  #   - ./crontab/config/config.json:/opt/crontab/config.json:rw
+  #   - ./crontab/logs:/var/log/crontab:rw

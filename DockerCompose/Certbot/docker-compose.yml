@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  crontab:
+    image: crontab:1.0.0
+    container_name: crontab
+    volumes:
+      - conf:/root/conf:rw
+      - acme-chanllenge:/root/acme-chanllenge:rw

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CenterJointOfficialWebsite</title>
+    <link rel="shortcut icon" href="~/img/1700203562.ico" type="image/x-icon">
+    <link rel="stylesheet" href="~/lib/bootstrap-5.2.3-dist/css/bootstrap.min.css" asp-append-version="true" async />
+    <link rel="stylesheet" href="~/lib/fontawesome-free-6.4.2-web/css/all.min.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/cms.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-add-nonce></script>
+    <script src="~/js/site-head.js" asp-add-nonce></script>
+
+</head>
+<body>
+    @*used for ajax in AddAntiForgeryToken()*@
+    <form id="__AjaxAntiForgeryForm">
+        @Html.AntiForgeryToken()
+    </form>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light nav-bg-color fixed-top">
+            <div class="container">
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-btn">
+                        <span class="title-text">選擇頁面</span>
+                    </a>
+                    <ul class="menu">
+                        <li>
+                            <a asp-controller="Cms" asp-action="DemoPage">DemoPage</a>
+                        </li>
+                        <li>
+                            <a asp-controller="Cms" asp-action="OperatingManual">後台操作手冊</a>
+                        </li>
+                        <li>
+                            <a asp-controller="NavItemsManager" asp-action="List">導覽列</a>
+                        </li>
+                        <li>
+                            <a asp-controller="IndexManager" asp-action="List">首頁頁面管理</a>
+                        </li>
+                        <li>
+                            <a asp-controller="BlogManager" asp-action="List">金融新知</a>
+                        </li>
+                        <li>
+                            <a asp-controller="ProductManager" asp-action="List">產品與解決方案</a>
+                        </li>
+                        <li>
+                            <a asp-controller="SuccessCaseManager" asp-action="List">成功案例</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="cms-title text-center fg-0">
+                    <h3 class="text-blue">宗宸鑫網站內容編輯器</h3>
+                    <h4 class="text-blue">CenterJoint Website Cms</h4>
+                </div>
+
+                <button class="navbar-toggler nav-text d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse align-text-right fg-0" id="collapsibleNavId">
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item mx-4 p-2 bg-logo-color">
+                            <a class="nav-link text-center" asp-controller="Account" asp-action="Logout">登出</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <main role="main" class="mt-5 pt-5 pb-3">
+        <div class="loading-icon"></div>
+        @RenderBody()
+        <div class="goTop">
+            <a href="#" class="goTopBtn jq-goTop">
+                <div class="go-top-icon rounded-circle">
+                    <div class="d-flex justify-content-center align-items-center pt-2">
+                        <img class="top-button-icon-color" src="/img/svg-img/button_angles-up-solid.svg" alt="" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer class="footer-background">
+        <div class="container">
+            <div class="col-lg-4 py-3 mt-5">
+                <a class="p-2 " asp-controller="Home" asp-action="Index"><img class="nav-logo" src="/img/shared/logo-horizon-white.png" alt="CenterJoint" /></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/bootstrap-5.2.3-dist/js/bootstrap.min.js" asp-add-nonce></script>
+    <script src="~/js/site.js" asp-append-version="true" asp-add-nonce></script>
+    <script src="~/js/nav/nav-backstage.js" asp-append-version="true" asp-add-nonce></script>
+    <script src="~/lib/dompurify/dist/purify.min.js" asp-append-version="true" asp-add-nonce></script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

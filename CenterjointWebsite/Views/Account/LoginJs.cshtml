@@ -1,0 +1,9 @@
+﻿@using OfficialWebsite.Core.Model
+@model RecaptchaModel
+
+<script>
+    function onSubmit(token) {
+        $('#Token').val(token);
+        $("#frmLogin").submit();
+    }
+</script>

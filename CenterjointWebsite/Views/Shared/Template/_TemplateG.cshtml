@@ -1,0 +1,24 @@
+﻿@{
+    IList<string> texts = Model.Texts;
+    IList<string> images = Model.Images;
+}
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+            <div class=" d-flex justify-content-center p-3 w-300">
+                <img class="img-fluid image-block" src="@images[0]" alt="">
+            </div>
+        </div>
+        <div class="col-lg-8 d-flex flex-column pt-4">
+            <div class="d-flex justify-content-center image-container position-relative">
+                <h2 class="index-subtitle mb-2 text-block">@texts[0]</h2>
+            </div>
+            <div class=" d-flex justify-content-center pt-1">
+                <h4 class="lh-lg">
+                    <span class="text-block pre-wrap">@texts[1]</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
